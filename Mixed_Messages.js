@@ -1,5 +1,5 @@
-// Project that will output 3 random messages when it runs.
-const mixedMessages = ()=> {
+// Project that will output random messages when it runs.
+const mixedMessages = () => {
 
 let inspirationalMessages = ['"The Best Way To Get Started Is To Quit Talking And Begin Doing." – Walt Disney', '“Don’t Let Yesterday Take Up Too Much Of Today.” – Will Rogers', 
 '“You Learn More From Failure Than From Success. Don’t Let It Stop You. Failure Builds Character.”', '“It’s Not Whether You Get Knocked Down, It’s Whether You Get Up.” – Inspirational Quote By Vince Lombardi', '“If You Are Working On Something That You Really Care About, You Don’t Have To Be Pushed. The Vision Pulls You.” – Steve Jobs',
@@ -9,18 +9,16 @@ let greetingMessage = ['Hello!', 'Good to see you Again!', 'Hey There!', 'Its so
 
 const generateRandMessage = arr1 => {
         return Math.floor(Math.random() * arr1.length);
-    }
+}
     
-const randomGreeting = generateRandMessage(greetingMessage);
+const randomGreeting = greetingMessage[generateRandMessage(greetingMessage)];
 console.log(randomGreeting);
 
-const randomInspiration = generateRandMessage(inspirationalMessages);
+const randomInspiration = inspirationalMessages[generateRandMessage(inspirationalMessages)];
 console.log(randomInspiration);
 
 };
 
 mixedMessages();
-
-
 
 
